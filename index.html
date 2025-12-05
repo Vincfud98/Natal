@@ -44,26 +44,26 @@
         
         .santa-container {
             position: relative;
-            margin-bottom: 40px;
+            margin-bottom: 20px;
             animation: bounce 2s infinite;
         }
         
         .santa-body {
-            font-size: 10rem;
+            font-size: 6rem;
             color: white;
-            text-shadow: 5px 5px 0 rgba(0, 0, 0, 0.2);
+            text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.2);
         }
         
         .speech-bubble {
             position: absolute;
-            top: -100px;
-            right: -200px;
+            top: -60px;
+            right: -120px;
             background: white;
-            padding: 25px;
-            border-radius: 30px;
-            width: 300px;
-            box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.2);
-            font-size: 1.4rem;
+            padding: 15px;
+            border-radius: 20px;
+            width: 200px;
+            box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.2);
+            font-size: 1rem;
             text-align: center;
             color: #d32f2f;
             font-weight: bold;
@@ -72,54 +72,58 @@
         .speech-bubble:after {
             content: '';
             position: absolute;
-            bottom: -20px;
+            bottom: -15px;
             left: 50%;
-            border: 10px solid transparent;
+            border: 8px solid transparent;
             border-top-color: white;
-            margin-left: -10px;
+            margin-left: -8px;
         }
         
         .intro-text {
             color: white;
-            font-size: 1.8rem;
+            font-size: 1.2rem;
             text-align: center;
-            max-width: 700px;
-            margin-bottom: 50px;
-            line-height: 1.5;
-            text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.2);
+            max-width: 90%;
+            margin-bottom: 30px;
+            line-height: 1.4;
+            text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
         }
         
         .confess-btn {
             background: #4CAF50;
             color: white;
             border: none;
-            padding: 20px 50px;
-            font-size: 1.8rem;
+            padding: 15px 30px;
+            font-size: 1.2rem;
             border-radius: 50px;
             cursor: pointer;
             font-family: 'Comic Neue', cursive;
             font-weight: bold;
-            box-shadow: 0 10px 0 #388E3C;
+            box-shadow: 0 8px 0 #388E3C;
             transition: all 0.2s;
             animation: pulse 2s infinite;
+            text-align: center;
+            width: 90%;
+            max-width: 500px;
         }
         
         .confess-btn:hover {
             transform: translateY(-5px);
-            box-shadow: 0 15px 0 #388E3C;
+            box-shadow: 0 13px 0 #388E3C;
         }
         
         .confess-btn:active {
             transform: translateY(5px);
-            box-shadow: 0 5px 0 #388E3C;
+            box-shadow: 0 3px 0 #388E3C;
         }
         
         /* Lista de Presentes */
         #gift-list {
             display: none;
-            padding: 20px;
+            padding: 15px;
             max-width: 1400px;
             margin: 0 auto;
+            width: 100%;
         }
         
         #gift-list.visible {
@@ -129,78 +133,80 @@
         
         .list-header {
             text-align: center;
-            margin-bottom: 40px;
-            padding: 30px;
+            margin-bottom: 25px;
+            padding: 20px 15px;
             background: white;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             position: relative;
             overflow: hidden;
         }
         
         .list-header h1 {
             font-family: 'Mountains of Christmas', cursive;
-            font-size: 4rem;
+            font-size: 2.2rem;
             color: #d32f2f;
-            margin-bottom: 10px;
-            text-shadow: 3px 3px 0 #FFEB3B;
+            margin-bottom: 8px;
+            text-shadow: 2px 2px 0 #FFEB3B;
+            line-height: 1.2;
         }
         
         .list-header h2 {
-            font-size: 1.8rem;
+            font-size: 1.2rem;
             color: #1976D2;
             font-weight: 400;
+            line-height: 1.3;
         }
         
         .gift-counter {
             position: absolute;
-            top: 20px;
-            right: 20px;
+            top: 10px;
+            right: 10px;
             background: #FF9800;
             color: white;
-            padding: 10px 20px;
+            padding: 6px 12px;
             border-radius: 50px;
             font-weight: bold;
-            font-size: 1.2rem;
+            font-size: 0.9rem;
         }
         
         .gift-container {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-            gap: 30px;
-            margin-bottom: 40px;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            margin-bottom: 30px;
         }
         
         .gift-card {
             background: white;
-            border-radius: 20px;
+            border-radius: 15px;
             overflow: hidden;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
             position: relative;
         }
         
         .gift-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
         }
         
         .gift-tag {
             position: absolute;
-            top: -10px;
-            left: 20px;
+            top: -8px;
+            left: 15px;
             background: #FF5722;
             color: white;
-            padding: 10px 20px;
-            border-radius: 10px;
+            padding: 6px 12px;
+            border-radius: 8px;
             font-weight: bold;
-            font-size: 1.2rem;
+            font-size: 0.9rem;
             z-index: 2;
-            box-shadow: 0 5px 0 #D84315;
+            box-shadow: 0 3px 0 #D84315;
         }
         
         .gift-icon-container {
-            height: 150px;
+            height: 120px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -209,47 +215,49 @@
         }
         
         .gift-icon-bg {
-            font-size: 5rem;
+            font-size: 4rem;
             opacity: 0.1;
             position: absolute;
         }
         
         .gift-main-icon {
-            font-size: 3.5rem;
+            font-size: 2.5rem;
             color: #1976D2;
         }
         
         .gift-content {
-            padding: 25px;
+            padding: 18px;
         }
         
         .gift-title {
-            font-size: 1.8rem;
+            font-size: 1.3rem;
             color: #1976D2;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
             font-weight: bold;
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 8px;
         }
         
         .gift-description {
             color: #666;
-            line-height: 1.6;
-            margin-bottom: 20px;
-            font-size: 1.1rem;
+            line-height: 1.5;
+            margin-bottom: 15px;
+            font-size: 0.95rem;
         }
         
         .gift-details {
             background: #FFF9C4;
-            padding: 15px;
-            border-radius: 10px;
-            margin-bottom: 20px;
-            border-left: 5px solid #FFD54F;
+            padding: 12px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            border-left: 4px solid #FFD54F;
+            font-size: 0.85rem;
         }
         
         .gift-details strong {
             color: #E65100;
+            font-size: 0.9rem;
         }
         
         .gift-link {
@@ -257,95 +265,97 @@
             text-align: center;
             background: #4CAF50;
             color: white;
-            padding: 15px;
-            border-radius: 10px;
+            padding: 12px;
+            border-radius: 8px;
             text-decoration: none;
             font-weight: bold;
-            font-size: 1.2rem;
+            font-size: 1rem;
             transition: all 0.3s;
-            box-shadow: 0 5px 0 #388E3C;
+            box-shadow: 0 3px 0 #388E3C;
         }
         
         .gift-link:hover {
             background: #388E3C;
-            transform: translateY(-3px);
-            box-shadow: 0 8px 0 #2E7D32;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 0 #2E7D32;
         }
         
         .book-section {
             background: white;
-            border-radius: 20px;
-            padding: 30px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            margin-top: 40px;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
         }
         
         .book-section h2 {
             text-align: center;
             color: #9C27B0;
-            font-size: 2.5rem;
-            margin-bottom: 30px;
+            font-size: 1.6rem;
+            margin-bottom: 20px;
             font-family: 'Mountains of Christmas', cursive;
+            line-height: 1.3;
         }
         
         .book-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 20px;
+            grid-template-columns: 1fr;
+            gap: 15px;
         }
         
         .book-card {
             background: #F3E5F5;
-            padding: 20px;
-            border-radius: 15px;
+            padding: 15px;
+            border-radius: 10px;
             text-align: center;
             transition: all 0.3s;
         }
         
         .book-card:hover {
-            transform: scale(1.05);
+            transform: scale(1.02);
             background: #E1BEE7;
         }
         
         .book-card h3 {
             color: #7B1FA2;
-            margin-bottom: 15px;
-            font-size: 1.5rem;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 10px;
+            gap: 8px;
         }
         
         .disclaimer {
             text-align: center;
-            margin-top: 40px;
-            padding: 20px;
+            margin-top: 30px;
+            padding: 15px;
             background: #FFF3E0;
-            border-radius: 20px;
-            border: 3px dashed #FF9800;
-            font-size: 1.3rem;
+            border-radius: 15px;
+            border: 2px dashed #FF9800;
+            font-size: 1rem;
             color: #E65100;
             font-weight: bold;
         }
         
         .footer {
             text-align: center;
-            margin-top: 40px;
-            padding: 20px;
+            margin-top: 30px;
+            padding: 15px;
             color: #666;
-            font-size: 1rem;
+            font-size: 0.9rem;
+            line-height: 1.4;
         }
         
         /* Animações */
         @keyframes bounce {
             0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-20px); }
+            50% { transform: translateY(-10px); }
         }
         
         @keyframes pulse {
             0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.05); }
+            50% { transform: scale(1.03); }
         }
         
         @keyframes fadeIn {
@@ -362,8 +372,8 @@
         }
         
         .bubble-1 {
-            width: 100px;
-            height: 100px;
+            width: 60px;
+            height: 60px;
             background: #FF5252;
             top: 10%;
             left: 5%;
@@ -371,8 +381,8 @@
         }
         
         .bubble-2 {
-            width: 150px;
-            height: 150px;
+            width: 80px;
+            height: 80px;
             background: #4CAF50;
             top: 20%;
             right: 10%;
@@ -380,8 +390,8 @@
         }
         
         .bubble-3 {
-            width: 80px;
-            height: 80px;
+            width: 50px;
+            height: 50px;
             background: #FFC107;
             bottom: 15%;
             left: 15%;
@@ -390,38 +400,215 @@
         
         @keyframes float {
             0%, 100% { transform: translateY(0) rotate(0deg); }
-            50% { transform: translateY(-20px) rotate(180deg); }
+            50% { transform: translateY(-10px) rotate(180deg); }
         }
         
-        /* Responsivo */
-        @media (max-width: 768px) {
-            .gift-container {
-                grid-template-columns: 1fr;
+        /* Tablet */
+        @media (min-width: 768px) {
+            .santa-body {
+                font-size: 8rem;
+            }
+            
+            .speech-bubble {
+                top: -80px;
+                right: -150px;
+                padding: 20px;
+                width: 250px;
+                font-size: 1.2rem;
+            }
+            
+            .intro-text {
+                font-size: 1.5rem;
+                margin-bottom: 40px;
+            }
+            
+            .confess-btn {
+                padding: 18px 40px;
+                font-size: 1.4rem;
+                max-width: 600px;
             }
             
             .list-header h1 {
+                font-size: 2.8rem;
+            }
+            
+            .list-header h2 {
+                font-size: 1.4rem;
+            }
+            
+            .gift-container {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 25px;
+            }
+            
+            .book-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+            
+            .gift-tag {
+                font-size: 1rem;
+                padding: 8px 15px;
+            }
+            
+            .gift-title {
+                font-size: 1.5rem;
+            }
+            
+            .gift-description {
+                font-size: 1rem;
+            }
+            
+            .book-section h2 {
+                font-size: 2rem;
+            }
+        }
+        
+        /* Desktop */
+        @media (min-width: 1024px) {
+            .santa-body {
+                font-size: 10rem;
+            }
+            
+            .speech-bubble {
+                top: -100px;
+                right: -200px;
+                padding: 25px;
+                width: 300px;
+                font-size: 1.4rem;
+            }
+            
+            .intro-text {
+                font-size: 1.8rem;
+                max-width: 700px;
+            }
+            
+            .confess-btn {
+                padding: 20px 50px;
+                font-size: 1.8rem;
+                max-width: 700px;
+            }
+            
+            #gift-list {
+                padding: 20px;
+            }
+            
+            .list-header {
+                padding: 30px;
+                margin-bottom: 40px;
+            }
+            
+            .list-header h1 {
+                font-size: 4rem;
+            }
+            
+            .list-header h2 {
+                font-size: 1.8rem;
+            }
+            
+            .gift-container {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 30px;
+                margin-bottom: 40px;
+            }
+            
+            .gift-card:hover {
+                transform: translateY(-10px);
+            }
+            
+            .book-section {
+                padding: 30px;
+                margin-top: 40px;
+            }
+            
+            .book-section h2 {
                 font-size: 2.5rem;
+            }
+            
+            .disclaimer {
+                margin-top: 40px;
+                padding: 20px;
+                font-size: 1.3rem;
+            }
+            
+            .footer {
+                margin-top: 40px;
+                padding: 20px;
+                font-size: 1rem;
+            }
+            
+            .gift-icon-container {
+                height: 150px;
+            }
+            
+            .gift-icon-bg {
+                font-size: 5rem;
+            }
+            
+            .gift-main-icon {
+                font-size: 3.5rem;
+            }
+            
+            .gift-content {
+                padding: 25px;
+            }
+            
+            .gift-title {
+                font-size: 1.8rem;
+            }
+            
+            .gift-description {
+                font-size: 1.1rem;
+            }
+            
+            .gift-details {
+                padding: 15px;
+                font-size: 0.95rem;
+            }
+            
+            .gift-link {
+                padding: 15px;
+                font-size: 1.2rem;
+            }
+        }
+        
+        /* Para telas muito grandes */
+        @media (min-width: 1400px) {
+            .gift-container {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 35px;
+            }
+        }
+        
+        /* Para telas muito pequenas (menos de 350px) */
+        @media (max-width: 350px) {
+            .santa-body {
+                font-size: 4.5rem;
             }
             
             .speech-bubble {
                 position: relative;
                 top: 0;
                 right: 0;
-                margin-bottom: 20px;
-                width: 100%;
-            }
-            
-            .santa-body {
-                font-size: 6rem;
+                margin-bottom: 15px;
+                width: 90%;
             }
             
             .intro-text {
-                font-size: 1.4rem;
+                font-size: 1rem;
             }
             
             .confess-btn {
-                padding: 15px 30px;
-                font-size: 1.4rem;
+                font-size: 1rem;
+                padding: 12px 20px;
+            }
+            
+            .list-header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .gift-title {
+                font-size: 1.1rem;
             }
         }
     </style>
@@ -443,8 +630,8 @@
         <div class="intro-text">
             <p>Ok, eu sei que eu sou <strong>PÉSSIMO</strong> pra dar presente...</p>
             <p>Nunca sei o que comprar e prefiro mil vezes dar do que receber presentes</p>
-            <p style="margin-top: 20px; font-size: 2rem;">🎁 <strong>MAS ESTE ANO VAI SER DIFERENTE!</strong> 🎁</p>
-            <p style="margin-top: 20px;">Eu preparei uma lista SUPER ESPECIAL com tudo que eu gostaria de ganhar de Natal!</p>
+            <p style="margin-top: 15px; font-size: 1.5rem;">🎁 <strong>MAS ESTE ANO VAI SER DIFERENTE!</strong> 🎁</p>
+            <p style="margin-top: 15px;">Eu preparei uma lista SUPER ESPECIAL com tudo que eu gostaria de ganhar de Natal!</p>
         </div>
         
         <button class="confess-btn" id="reveal-btn">
@@ -458,7 +645,7 @@
             <div class="gift-counter">9 Presentes + 2 Listas de Livros</div>
             <h1>MINHA LISTA DE NATAL</h1>
             <h2>"Espero que isso te ajude"</h2>
-            <p style="margin-top: 15px; color: #666; font-size: 1.2rem;"></p>
+            <p style="margin-top: 10px; color: #666; font-size: 1rem;">*Organizada por nível de desejo*</p>
         </div>
         
         <div class="gift-container">
@@ -470,7 +657,7 @@
                     <div class="gift-main-icon"><i class="fas fa-headphones"></i></div>
                 </div>
                 <div class="gift-content">
-                    <h2><i class="fas fa-headphones"></i> Fone Bluetooth</h2>
+                    <h2 class="gift-title"><i class="fas fa-headphones"></i> Fone Bluetooth</h2>
                     <p class="gift-description">Pra ignorar o mundo com estilo! Com cancelamento de ruído</p>
                     <div class="gift-details">
                         <strong>Motivo:</strong> Ouvir podcast enquanto finjo que estou prestando atenção<br>
@@ -488,7 +675,7 @@
                     <div class="gift-main-icon"><i class="fas fa-wind"></i></div>
                 </div>
                 <div class="gift-content">
-                    <h2><i class="fas fa-wind"></i> Perfume Nautica Voyage</h2>
+                    <h2 class="gift-title"><i class="fas fa-wind"></i> Perfume Nautica Voyage</h2>
                     <p class="gift-description">Cheiro de homem pra ficar cheiroso pra minha gata</p>
                     <div class="gift-details">
                         <strong>Uso:</strong> Sair com minha esposa nos finais de semana<br>
@@ -506,12 +693,12 @@
                     <div class="gift-main-icon"><i class="fas fa-tshirt"></i></div>
                 </div>
                 <div class="gift-content">
-                    <h2><i class="fas fa-tshirt"></i> Camiseta Hering</h2>
+                    <h2 class="gift-title"><i class="fas fa-tshirt"></i> Camiseta Hering</h2>
                     <p class="gift-description">Básica, simples, discreta. Como eu, mas em forma de camiseta.</p>
                     <div class="gift-details">
                         <strong>Estilo:</strong> "Pai de família que tenta parecer jovem"<br>
                         <strong>Tamanho:</strong> XXG (o G é de "generoso")<br>
-                        <strong>Cor:</strong> Qualquer uma, desde que não seja verde pq aqui é Corinthians
+                        <strong>Cor:</strong> Qualquer uma, desde que não seja verde
                     </div>
                     <a href="https://www.hering.com.br/camisetas-masculinas" target="_blank" class="gift-link">VER CAMISETAS</a>
                 </div>
@@ -525,17 +712,17 @@
                     <div class="gift-main-icon"><i class="fas fa-robot"></i></div>
                 </div>
                 <div class="gift-content">
-                    <h2><i class="fas fa-robot"></i> Alexa Echo Dot</h2>
+                    <h2 class="gift-title"><i class="fas fa-robot"></i> Alexa Echo Dot</h2>
                     <p class="gift-description">Alguém que me obedece sempre e não reclama quando falo besteira.</p>
                     <div class="gift-details">
                         <strong>Função principal:</strong> Lembrar o que eu sempre esqueço<br>
-                        <strong>Função secundária:</strong> Tocar "La solitudine" da Laura Pausini em loop enquanto faço janta pra Carol
+                        <strong>Função secundária:</strong> Tocar músicas em loop enquanto faço janta
                     </div>
                     <a href="https://www.amazon.com.br/Echo-Dot-4%C2%AA-gera%C3%A7%C3%A3o-Cor-Branca/dp/B09B8XVSDP" target="_blank" class="gift-link">VER ALEXA</a>
                 </div>
             </div>
             
-            <!-- Presente 5 - CORRIGIDO -->
+            <!-- Presente 5 -->
             <div class="gift-card">
                 <div class="gift-tag">#5 TELA GRANDE</div>
                 <div class="gift-icon-container">
@@ -543,12 +730,12 @@
                     <div class="gift-main-icon"><i class="fas fa-tv"></i></div>
                 </div>
                 <div class="gift-content">
-                    <h2><i class="fas fa-tv"></i> Monitor com DisplayPort</h2>
-                    <p class="gift-description">Para ver os jogos da Copa enquanto trabalho na outra tela. Tela grande é essencial!</p>
+                    <h2 class="gift-title"><i class="fas fa-tv"></i> Monitor com DisplayPort</h2>
+                    <p class="gift-description">Para ver os jogos da Copa enquanto trabalho na outra tela.</p>
                     <div class="gift-details">
-                        <strong>Tamanho ideal:</strong> "Quanto maior, melhor" (como a pizza)<br>
-                        <strong>Requisito obrigatório:</strong> DisplayPort (não aceito imitações)<br>
-                        <strong>Marca:</strong> Qualquer uma que caiba no orçamento do Papai Noel
+                        <strong>Tamanho ideal:</strong> "Quanto maior, melhor"<br>
+                        <strong>Requisito obrigatório:</strong> DisplayPort<br>
+                        <strong>Marca:</strong> LG, Samsung ou similar
                     </div>
                     <a href="https://www.amazon.com.br/Monitor-Ultrawide-2560x1080-Inteligente-Adaptative/dp/B0DCW6W5BK" target="_blank" class="gift-link">VER MONITOR</a>
                 </div>
@@ -562,12 +749,12 @@
                     <div class="gift-main-icon"><i class="fas fa-basketball-ball"></i></div>
                 </div>
                 <div class="gift-content">
-                    <h2><i class="fas fa-basketball-ball"></i> Chinelo NBA Dallas Mavericks</h2>
-                    <p class="gift-description">Pra apoiar meu time favorito enquanto fico deitado no sofá reclamando que os jogadores deviam se esforçar mais.</p>
+                    <h2 class="gift-title"><i class="fas fa-basketball-ball"></i> Chinelo NBA Dallas Mavericks</h2>
+                    <p class="gift-description">Pra apoiar meu time favorito enquanto fico deitado no sofá.</p>
                     <div class="gift-details">
-                        <strong>Time:</strong> Dallas Mavericks (Luka Doncic é o cara!)<br>
-                        <strong>Cor:</strong> Azul (pra combinar com minha cara quando o time perder)<br>
-                        <strong>Tamanho:</strong> 42 (meus pés pararam de crescer, só a barriga não)
+                        <strong>Time:</strong> Dallas Mavericks<br>
+                        <strong>Cor:</strong> Azul<br>
+                        <strong>Tamanho:</strong> 42
                     </div>
                     <a href="https://www.rider.com.br/p/chinelo-slide-rush-nba-rider/12512" target="_blank" class="gift-link">VER CHINELO</a>
                 </div>
@@ -581,10 +768,10 @@
                     <div class="gift-main-icon"><i class="fas fa-gamepad"></i></div>
                 </div>
                 <div class="gift-content">
-                    <h2><i class="fas fa-gamepad"></i> Video Game Portátil Retro</h2>
+                    <h2 class="gift-title"><i class="fas fa-gamepad"></i> Video Game Portátil Retro</h2>
                     <p class="gift-description">10.000 jogos dos anos 90/2000! Vou jogar uns 15, mas o importante é ter a opção.</p>
                     <div class="gift-details">
-                        <strong>Justificativa:</strong> "Os jogos antigos são melhores" (fato científico)<br>
+                        <strong>Justificativa:</strong> "Os jogos antigos são melhores"<br>
                         <strong>Tempo de uso:</strong> Até minha esposa reclamar<br>
                         <strong>Incluso:</strong> Sensação de ter 15 anos de novo
                     </div>
@@ -600,10 +787,10 @@
                     <div class="gift-main-icon"><i class="fas fa-futbol"></i></div>
                 </div>
                 <div class="gift-content">
-                    <h2><i class="fas fa-futbol"></i> EA FC 26 (FIFA 26)</h2>
-                    <p class="gift-description">Pra continuar perdendo online pra adolescentes de 14 anos que têm reflexos melhores que os meus.</p>
+                    <h2 class="gift-title"><i class="fas fa-futbol"></i> EA FC 26 (FIFA 26)</h2>
+                    <p class="gift-description">Pra continuar perdendo online pra adolescentes de 14 anos.</p>
                     <div class="gift-details">
-                        <strong>Plataforma:</strong> PS5 (a desculpa oficial é "é pro meu filho")<br>
+                        <strong>Plataforma:</strong> PS5<br>
                         <strong>Expectativa:</strong> Virar pro player<br>
                         <strong>Realidade:</strong> Ficar em último e culpar o controle
                     </div>
@@ -619,12 +806,12 @@
                     <div class="gift-main-icon"><i class="fas fa-mobile-alt"></i></div>
                 </div>
                 <div class="gift-content">
-                    <h2><i class="fas fa-mobile-alt"></i> Suporte de Celular 360º</h2>
-                    <p class="gift-description">Pra assistir vídeos sem segurar o celular, porque sou multitarefa (preguiçoso) demais.</p>
+                    <h2 class="gift-title"><i class="fas fa-mobile-alt"></i> Suporte de Celular 360º</h2>
+                    <p class="gift-description">Pra assistir vídeos sem segurar o celular, porque sou multitarefa demais.</p>
                     <div class="gift-details">
                         <strong>Uso principal:</strong> Netflix na cozinha enquanto "cozinho"<br>
                         <strong>Característica:</strong> 360º de pura procrastinação<br>
-                        <strong>Marca:</strong> Tudoprafoto (nome promissor!)
+                        <strong>Marca:</strong> Tudoprafoto
                     </div>
                     <a href="https://www.kabum.com.br/produto/473237/suporte-de-mesa-para-celular-360-tudoprafoto" target="_blank" class="gift-link">VER SUPORTE</a>
                 </div>
@@ -637,12 +824,12 @@
             <div class="book-grid">
                 <div class="book-card">
                     <h3><i class="fas fa-newspaper"></i> JORNALISMO</h3>
-                    <p>Livros pra entender o mundo e poder opinar no almoço de família com propriedade (ou fingimento).</p>
+                    <p>Livros pra entender o mundo e poder opinar no almoço de família com propriedade.</p>
                     <a href="https://www.amazon.com.br/hz/wishlist/ls/11RV09N39SNCA?ref_=wl_share" target="_blank" class="gift-link" style="background: #9C27B5;">VER LISTA</a>
                 </div>
                 <div class="book-card">
                     <h3><i class="fas fa-landmark"></i> POLÍTICA</h3>
-                    <p>Pra reclamar dos políticos com argumentos sólidos, em vez de só xingar a TV como eu faço hoje.</p>
+                    <p>Pra reclamar dos políticos com argumentos sólidos.</p>
                     <a href="https://www.amazon.com.br/hz/wishlist/ls/2V5CL6KU35LWF?ref_=wl_share" target="_blank" class="gift-link" style="background: #9C27B5;">VER LISTA</a>
                 </div>
             </div>
@@ -650,14 +837,14 @@
         
         <!-- Disclaimer -->
         <div class="disclaimer">
-            <p><strong>ATENÇÃO QUERIDOS PRESENTEADORES:</strong></p>
+            <p><strong></strong></p>
             <p></p>
             <p>O importante é a intenção (e o presente, claro 😉)</p>
-            <p style="margin-top: 10px; font-size: 1rem;">*Última atualização: Quando o Papai Noel conferir esta lista*</p>
+            <p style="margin-top: 10px; font-size: 0.9rem;">*Última atualização: Quando o Papai Noel conferir esta lista*</p>
         </div>
         
         <div class="footer">
-            <p>Feito com ❤️ (e muita esperança) por alguém que realmente quer presentes de Natal</p>
+            <p></p>
             <p><strong></strong></p>
         </div>
     </div>
@@ -673,27 +860,50 @@
                 // Efeito visual
                 this.innerHTML = "ABRINDO LISTA...";
                 this.style.animation = 'none';
-                this.style.transform = 'scale(1.2)';
+                this.style.transform = 'scale(1.1)';
                 
                 // Esconder intro e mostrar lista após delay
                 setTimeout(() => {
                     introScreen.classList.add('hidden');
                     setTimeout(() => {
                         giftList.classList.add('visible');
-                    }, 500);
-                }, 800);
+                        // Scroll suave para o topo da lista
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }, 300);
+                }, 600);
             });
             
             // Adicionar efeito aos cartões de presente
             document.querySelectorAll('.gift-card').forEach(card => {
                 card.addEventListener('mouseenter', function() {
-                    this.style.transform = 'translateY(-10px)';
+                    if (window.innerWidth > 768) {
+                        this.style.transform = 'translateY(-8px)';
+                    }
                 });
                 
                 card.addEventListener('mouseleave', function() {
                     this.style.transform = 'translateY(0)';
                 });
+                
+                // Para toque em mobile
+                card.addEventListener('touchstart', function() {
+                    this.style.transform = 'scale(0.98)';
+                });
+                
+                card.addEventListener('touchend', function() {
+                    this.style.transform = 'scale(1)';
+                });
             });
+            
+            // Prevenir zoom em duplo toque em mobile
+            let lastTouchEnd = 0;
+            document.addEventListener('touchend', function(event) {
+                const now = Date.now();
+                if (now - lastTouchEnd <= 300) {
+                    event.preventDefault();
+                }
+                lastTouchEnd = now;
+            }, false);
         });
     </script>
 </body>
