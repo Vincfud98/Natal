@@ -1,675 +1,767 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de Aniversário do Vinicius - Especial 2026</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    
-    <style>
-        :root {
-            --primary: #6a11cb;
-            --secondary: #2575fc;
-            --accent: #ff4081;
-            --accent-hover: #ff1c6b;
-            --text-dark: #2d3436;
-            --text-light: #636e72;
-            --glass-bg: rgba(255, 255, 255, 0.85);
-            --glass-border: rgba(255, 255, 255, 0.4);
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Aniversario do Vinicius</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #efe8dc;
+      --bg-soft: #f6f1e8;
+      --paper: rgba(255, 252, 247, 0.92);
+      --paper-strong: #fffdf9;
+      --ink: #1f2a24;
+      --muted: #667067;
+      --line: rgba(31, 42, 36, 0.11);
+      --accent: #1f5c4c;
+      --accent-soft: rgba(31, 92, 76, 0.12);
+      --accent-strong: #123a31;
+      --warm: #aa5d39;
+      --warm-soft: rgba(170, 93, 57, 0.12);
+      --shadow: 0 28px 80px rgba(44, 34, 20, 0.12);
+      --radius-xl: 32px;
+      --radius-lg: 24px;
+      --radius-md: 18px;
+      --max-width: 1240px;
+    }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Poppins', sans-serif;
-            /* Fundo animado super moderno */
-            background: linear-gradient(-45deg, #ff9a9e, #fecfef, #a1c4fd, #c2e9fb);
-            background-size: 400% 400%;
-            animation: gradientBG 15s ease infinite;
-            min-height: 100vh;
-            overflow-x: hidden;
-            color: var(--text-dark);
-        }
+    * {
+      box-sizing: border-box;
+    }
 
-        @keyframes gradientBG {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
+    html {
+      scroll-behavior: smooth;
+    }
 
-        h1, h2, h3, .gift-title {
-            font-family: 'Fredoka', sans-serif;
-        }
-        
-        /* Tela de Introdução Premium */
-        #intro-screen {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100vh;
-            background: linear-gradient(135deg, rgba(106, 17, 203, 0.95) 0%, rgba(37, 117, 252, 0.95) 100%);
-            backdrop-filter: blur(10px);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;
-            transition: transform 1s cubic-bezier(0.86, 0, 0.07, 1);
-            padding: 20px;
-        }
-        
-        #intro-screen.hidden {
-            transform: translateY(-100%);
-        }
-        
-        .party-container {
-            position: relative;
-            margin-bottom: 30px;
-            animation: float-icon 3s ease-in-out infinite;
-        }
-        
-        .party-body {
-            font-size: 7rem;
-            filter: drop-shadow(0px 10px 15px rgba(0,0,0,0.3));
-        }
-        
-        .speech-bubble {
-            position: absolute;
-            top: -50px;
-            right: -130px;
-            background: white;
-            padding: 15px 25px;
-            border-radius: 20px 20px 20px 0;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-            font-size: 1.1rem;
-            text-align: center;
-            color: var(--primary);
-            font-weight: 700;
-            transform: rotate(5deg);
-        }
-        
-        .intro-text {
-            color: white;
-            font-size: 1.2rem;
-            text-align: center;
-            max-width: 700px;
-            margin-bottom: 40px;
-            line-height: 1.6;
-            font-weight: 300;
-        }
+    body {
+      margin: 0;
+      font-family: "Manrope", sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(31, 92, 76, 0.12), transparent 32%),
+        radial-gradient(circle at bottom right, rgba(170, 93, 57, 0.12), transparent 26%),
+        linear-gradient(180deg, #f7f1e8 0%, #ece4d7 100%);
+      min-height: 100vh;
+    }
 
-        .intro-text strong {
-            font-weight: 700;
-            color: #ffd700;
-        }
-        
-        .confess-btn {
-            background: linear-gradient(135deg, var(--accent) 0%, #ff758c 100%);
-            color: white;
-            border: none;
-            padding: 18px 40px;
-            font-size: 1.3rem;
-            border-radius: 50px;
-            cursor: pointer;
-            font-family: 'Fredoka', sans-serif;
-            font-weight: 600;
-            letter-spacing: 1px;
-            box-shadow: 0 10px 20px rgba(255, 64, 129, 0.4);
-            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            text-align: center;
-            width: 90%;
-            max-width: 400px;
-        }
-        
-        .confess-btn:hover {
-            transform: translateY(-5px) scale(1.05);
-            box-shadow: 0 15px 25px rgba(255, 64, 129, 0.5);
-        }
-        
-        /* Lista de Presentes */
-        #gift-list {
-            display: none;
-            padding: 40px 20px;
-            max-width: 1300px;
-            margin: 0 auto;
-            width: 100%;
-        }
-        
-        #gift-list.visible {
-            display: block;
-        }
-        
-        /* Estilo Glassmorphism para o Header */
-        .list-header {
-            text-align: center;
-            margin-bottom: 50px;
-            padding: 40px 20px;
-            background: var(--glass-bg);
-            backdrop-filter: blur(15px);
-            -webkit-backdrop-filter: blur(15px);
-            border: 1px solid var(--glass-border);
-            border-radius: 24px;
-            box-shadow: 0 8px 32px rgba(31, 38, 135, 0.1);
-            position: relative;
-            animation: fadeUp 0.8s ease-out;
-        }
-        
-        .list-header h1 {
-            font-size: 2.8rem;
-            background: linear-gradient(135deg, var(--primary), var(--accent));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-bottom: 10px;
-        }
-        
-        .list-header h2 {
-            font-size: 1.2rem;
-            color: var(--text-light);
-            font-weight: 400;
-            font-family: 'Poppins', sans-serif;
-            font-style: italic;
-        }
-        
-        .gift-counter {
-            display: inline-block;
-            background: linear-gradient(135deg, #00b09b, #96c93d);
-            color: white;
-            padding: 8px 20px;
-            border-radius: 50px;
-            font-weight: 700;
-            font-size: 0.9rem;
-            margin-bottom: 15px;
-            box-shadow: 0 4px 15px rgba(0, 176, 155, 0.3);
-        }
-        
-        .gift-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-            gap: 30px;
-        }
-        
-        /* Cartões de Presente Modernos */
-        .gift-card {
-            background: var(--glass-bg);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border: 1px solid var(--glass-border);
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-            transition: all 0.4s ease;
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            opacity: 0; /* Para animação de entrada */
-            transform: translateY(30px);
-        }
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.38;
+      background-image:
+        linear-gradient(rgba(255, 255, 255, 0.34) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.24) 1px, transparent 1px);
+      background-size: 28px 28px;
+      mask-image: radial-gradient(circle at center, black 35%, transparent 90%);
+    }
 
-        .gift-card.show {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        
-        .gift-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-            border-color: rgba(255, 255, 255, 0.8);
-        }
-        
-        .gift-tag {
-            position: absolute;
-            top: 20px;
-            right: -35px;
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-            color: white;
-            padding: 5px 40px;
-            font-weight: 700;
-            font-size: 0.85rem;
-            z-index: 2;
-            transform: rotate(45deg);
-            box-shadow: 0 4px 10px rgba(245, 87, 108, 0.3);
-            letter-spacing: 1px;
-        }
-        
-        .gift-icon-container {
-            height: 140px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(to bottom, rgba(255,255,255,0.5), transparent);
-            position: relative;
-        }
-        
-        .gift-icon-bg {
-            font-size: 6rem;
-            color: var(--primary);
-            opacity: 0.05;
-            position: absolute;
-        }
-        
-        .gift-main-icon {
-            font-size: 3.5rem;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            filter: drop-shadow(0 5px 5px rgba(37, 117, 252, 0.2));
-            transition: transform 0.3s ease;
-        }
+    .shell {
+      width: min(calc(100% - 32px), var(--max-width));
+      margin: 24px auto 48px;
+      background: var(--paper);
+      border: 1px solid rgba(255, 255, 255, 0.72);
+      border-radius: 36px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      backdrop-filter: blur(18px);
+    }
 
-        .gift-card:hover .gift-main-icon {
-            transform: scale(1.1) rotate(5deg);
-        }
-        
-        .gift-content {
-            padding: 25px;
-            display: flex;
-            flex-direction: column;
-            flex-grow: 1;
-        }
-        
-        .gift-title {
-            font-size: 1.4rem;
-            color: var(--text-dark);
-            margin-bottom: 12px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        
-        .gift-description {
-            color: var(--text-light);
-            line-height: 1.6;
-            margin-bottom: 20px;
-            font-size: 0.95rem;
-            flex-grow: 1;
-        }
-        
-        .gift-details {
-            background: rgba(255, 255, 255, 0.6);
-            padding: 15px;
-            border-radius: 12px;
-            margin-bottom: 25px;
-            border-left: 4px solid var(--accent);
-            font-size: 0.85rem;
-            color: var(--text-dark);
-        }
-        
-        .gift-details strong {
-            color: var(--primary);
-            font-weight: 600;
-        }
-        
-        .gift-link {
-            display: block;
-            text-align: center;
-            background: linear-gradient(135deg, var(--secondary) 0%, #1e5dd6 100%);
-            color: white;
-            padding: 15px;
-            border-radius: 12px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 5px 15px rgba(37, 117, 252, 0.3);
-            margin-top: auto;
-        }
-        
-        .gift-link:hover {
-            background: linear-gradient(135deg, #1e5dd6 0%, #12408c 100%);
-            box-shadow: 0 8px 20px rgba(37, 117, 252, 0.4);
-            transform: translateY(-2px);
-        }
-        
-        .disclaimer {
-            text-align: center;
-            margin-top: 50px;
-            padding: 25px;
-            background: var(--glass-bg);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
-            border: 1px solid var(--glass-border);
-            font-size: 1.1rem;
-            color: var(--primary);
-            font-weight: 600;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-        }
-        
-        /* Bolhas Decorativas de Fundo */
-        .party-bubble {
-            position: absolute;
-            border-radius: 50%;
-            background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.2));
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-            backdrop-filter: blur(5px);
-            z-index: -1;
-            animation: float 20s infinite ease-in-out;
-        }
-        
-        .bubble-1 { width: 120px; height: 120px; top: 10%; left: 10%; }
-        .bubble-2 { width: 80px; height: 80px; top: 60%; right: 10%; animation-delay: -5s; }
-        .bubble-3 { width: 150px; height: 150px; bottom: 10%; left: 20%; animation-delay: -10s; }
-        
-        /* Animações */
-        @keyframes fadeUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
+    .hero {
+      position: relative;
+      padding: 52px 52px 36px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.8fr) minmax(280px, 0.9fr);
+      gap: 28px;
+      background:
+        linear-gradient(140deg, rgba(31, 92, 76, 0.08), transparent 55%),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.54), rgba(255, 255, 255, 0));
+      border-bottom: 1px solid var(--line);
+    }
 
-        @keyframes float-icon {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-15px); }
-        }
+    .eyebrow {
+      margin: 0 0 14px;
+      font-size: 0.76rem;
+      font-weight: 800;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
 
-        @keyframes float {
-            0%, 100% { transform: translateY(0) rotate(0deg) scale(1); }
-            50% { transform: translateY(-30px) rotate(180deg) scale(1.05); }
-        }
-        
-        /* Responsividade Ajustada */
-        @media (max-width: 768px) {
-            .list-header h1 { font-size: 2.2rem; }
-            .party-body { font-size: 5rem; }
-            .speech-bubble {
-                top: -60px;
-                right: -80px;
-                font-size: 0.9rem;
-                padding: 10px 15px;
-            }
-            .gift-container { grid-template-columns: 1fr; }
-        }
-    </style>
+    h1 {
+      margin: 0;
+      font-family: "Fraunces", serif;
+      font-size: clamp(2.7rem, 4.8vw, 5rem);
+      line-height: 0.94;
+      letter-spacing: -0.04em;
+      max-width: 11ch;
+    }
+
+    .hero-copy {
+      margin: 18px 0 0;
+      max-width: 58ch;
+      color: var(--muted);
+      line-height: 1.7;
+      font-size: 1rem;
+    }
+
+    .hero-note {
+      align-self: end;
+      background: rgba(255, 255, 255, 0.62);
+      border: 1px solid rgba(31, 42, 36, 0.08);
+      border-radius: 28px;
+      padding: 24px;
+    }
+
+    .note-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: var(--warm-soft);
+      color: var(--warm);
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .hero-note p {
+      margin: 16px 0 0;
+      color: var(--ink);
+      line-height: 1.65;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 24px;
+      max-width: 640px;
+    }
+
+    .stat {
+      padding: 18px 18px 16px;
+      background: rgba(255, 255, 255, 0.58);
+      border: 1px solid rgba(31, 42, 36, 0.08);
+      border-radius: 22px;
+    }
+
+    .stat strong {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 2rem;
+      line-height: 1;
+      font-weight: 800;
+      color: var(--accent-strong);
+    }
+
+    .stat span {
+      font-size: 0.88rem;
+      color: var(--muted);
+    }
+
+    .main {
+      padding: 28px;
+    }
+
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 26px;
+    }
+
+    .tabs {
+      display: inline-flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      padding: 8px;
+      background: rgba(255, 255, 255, 0.62);
+      border: 1px solid rgba(31, 42, 36, 0.08);
+      border-radius: 999px;
+    }
+
+    .tab {
+      border: 0;
+      border-radius: 999px;
+      background: transparent;
+      color: var(--muted);
+      padding: 13px 18px;
+      font: inherit;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.22s ease, color 0.22s ease, transform 0.22s ease;
+    }
+
+    .tab:hover {
+      transform: translateY(-1px);
+    }
+
+    .tab.active {
+      background: var(--accent);
+      color: #f6f4ef;
+      box-shadow: 0 12px 24px rgba(31, 92, 76, 0.18);
+    }
+
+    .section-intro {
+      color: var(--muted);
+      font-size: 0.96rem;
+      line-height: 1.6;
+    }
+
+    .panel {
+      display: none;
+    }
+
+    .panel.active {
+      display: block;
+      animation: fade-in 0.4s ease;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+      padding: 24px;
+      border-radius: var(--radius-lg);
+      background: var(--paper-strong);
+      border: 1px solid var(--line);
+      overflow: hidden;
+      transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: 0 auto auto 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, var(--accent), rgba(31, 92, 76, 0));
+      opacity: 0.9;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 30px rgba(41, 34, 24, 0.08);
+      border-color: rgba(31, 92, 76, 0.18);
+    }
+
+    .card.tutorial::before {
+      background: linear-gradient(90deg, var(--warm), rgba(170, 93, 57, 0));
+    }
+
+    .card-top {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 18px;
+      align-items: flex-start;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .pill.warm {
+      background: var(--warm-soft);
+      color: var(--warm);
+    }
+
+    .meta {
+      color: var(--muted);
+      font-size: 0.84rem;
+      font-weight: 700;
+    }
+
+    .card h2 {
+      margin: 0;
+      font-family: "Fraunces", serif;
+      font-size: 1.52rem;
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+    }
+
+    .subtitle {
+      margin: 10px 0 0;
+      color: var(--accent-strong);
+      font-size: 0.95rem;
+      font-weight: 700;
+      line-height: 1.5;
+    }
+
+    .description {
+      margin: 16px 0 0;
+      color: var(--muted);
+      line-height: 1.7;
+      font-size: 0.95rem;
+    }
+
+    .details {
+      list-style: none;
+      margin: 18px 0 0;
+      padding: 16px 0 0;
+      border-top: 1px solid rgba(31, 42, 36, 0.08);
+      display: grid;
+      gap: 10px;
+    }
+
+    .details li {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      color: var(--ink);
+      font-size: 0.93rem;
+      line-height: 1.6;
+    }
+
+    .details li::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      flex: 0 0 8px;
+      margin-top: 9px;
+      border-radius: 999px;
+      background: var(--accent);
+      opacity: 0.85;
+    }
+
+    .card.tutorial .details li::before {
+      background: var(--warm);
+    }
+
+    .link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 22px;
+      padding: 14px 18px;
+      border-radius: 16px;
+      background: var(--ink);
+      color: #f7f4ed;
+      text-decoration: none;
+      font-weight: 800;
+      letter-spacing: 0.01em;
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+
+    .link:hover {
+      transform: translateY(-1px);
+      background: #111915;
+    }
+
+    .link.light {
+      background: var(--accent);
+    }
+
+    .footer {
+      padding: 0 28px 32px;
+      color: var(--muted);
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+
+    .footer strong {
+      color: var(--ink);
+    }
+
+    @keyframes fade-in {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 980px) {
+      .hero {
+        grid-template-columns: 1fr;
+        padding: 38px 26px 28px;
+      }
+
+      .main {
+        padding: 22px;
+      }
+
+      .footer {
+        padding: 0 22px 28px;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .shell {
+        width: min(calc(100% - 18px), var(--max-width));
+        margin: 10px auto 24px;
+        border-radius: 24px;
+      }
+
+      .stats {
+        grid-template-columns: 1fr;
+      }
+
+      .toolbar {
+        align-items: flex-start;
+      }
+
+      .tabs {
+        width: 100%;
+        border-radius: 20px;
+      }
+
+      .tab {
+        flex: 1 1 calc(50% - 10px);
+        text-align: center;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div id="intro-screen">
-        <div class="party-bubble bubble-1"></div>
-        <div class="party-bubble bubble-2"></div>
-        <div class="party-bubble bubble-3"></div>
-        
-        <div class="party-container">
-            <div class="speech-bubble">
-                🎂 Psiu! Vem cá...
-            </div>
-            <div class="party-body">🎉</div>
+  <div class="shell">
+    <header class="hero">
+      <div>
+        <p class="eyebrow">Lista de aniversario</p>
+        <h1>Escolhas organizadas para facilitar a vida de todo mundo.</h1>
+        <p class="hero-copy">
+          Montei tudo em um formato mais direto: presentes gerais de um lado, camisas de time do outro.
+          Os links ja estao separados, com observacoes importantes para nao ter erro no pedido.
+        </p>
+
+        <div class="stats">
+          <div class="stat">
+            <strong id="general-count">0</strong>
+            <span>Presentes gerais</span>
+          </div>
+          <div class="stat">
+            <strong id="shirts-count">0</strong>
+            <span>Camisas de time</span>
+          </div>
+          <div class="stat">
+            <strong>31/03</strong>
+            <span>Atualizado em 2026</span>
+          </div>
         </div>
-        
-        <div class="intro-text">
-            <p>Ok, eu sei que eu sou <strong>PÉSSIMO</strong> pra dar presente...</p>
-            <p>Nunca sei o que comprar e prefiro mil vezes dar do que receber.</p>
-            <p style="margin-top: 20px; font-size: 1.6rem; font-family: 'Fredoka', sans-serif;">🎁 <strong>MAS ESTE ANO VAI SER DIFERENTE!</strong> 🎁</p>
-            <p style="margin-top: 15px;">Preparei uma seleção especial (e muito modesta) com tudo que eu adoraria ganhar!</p>
+      </div>
+
+      <aside class="hero-note">
+        <span class="note-label">Organizado e sem excesso</span>
+        <p>
+          A lista foi reorganizada com duas novas entradas, uma aba exclusiva para camisas de time
+          e um tutorial colocado logo no inicio para deixar essa parte bem mais clara.
+        </p>
+      </aside>
+    </header>
+
+    <main class="main">
+      <div class="toolbar">
+        <div class="tabs" role="tablist" aria-label="Categorias da lista">
+          <button class="tab active" type="button" data-tab="general" role="tab" aria-selected="true">Presentes gerais</button>
+          <button class="tab" type="button" data-tab="shirts" role="tab" aria-selected="false">Camisas de time</button>
         </div>
-        
-        <button class="confess-btn" id="reveal-btn">
-            VER A LISTA VIP
-        </button>
-    </div>
-    
-    <div id="gift-list">
-        <div class="list-header">
-            <div class="gift-counter">12 Presentes</div>
-            <h1>LISTA DE ANIVERSÁRIO DO VINICIUS</h1>
-            <h2>"Facilitando a vida dos meus amigos desde 2026"</h2>
+
+        <div class="section-intro" id="section-intro">
+          Produtos do dia a dia, setup, futebol e conforto em um unico lugar.
         </div>
-        
-        <div class="gift-container">
-            <div class="gift-card">
-                <div class="gift-tag">#1 VIP</div>
-                <div class="gift-icon-container">
-                    <div class="gift-icon-bg"><i class="fas fa-headphones"></i></div>
-                    <div class="gift-main-icon"><i class="fas fa-headphones"></i></div>
-                </div>
-                <div class="gift-content">
-                    <h2 class="gift-title"><i class="fas fa-headphones"></i> Fone Bluetooth</h2>
-                    <p class="gift-description">Pra ignorar o mundo com muito estilo! Cancelamento de ruído ativado.</p>
-                    <div class="gift-details">
-                        <strong>Motivo:</strong> Ouvir podcast enquanto finjo que estou prestando atenção na conversa.<br>
-                        <strong>Bônus:</strong> A desculpa perfeita para quando eu não te ouvir.
-                    </div>
-                    <a href="https://www.amazon.com.br/soundcore-Cancelamento-Reprodu%C3%A7%C3%A3o-Personaliza%C3%A7%C3%A3o-Transpar%C3%AAncia/dp/B0C3HCD34R" target="_blank" class="gift-link">VER NA AMAZON</a>
-                </div>
-            </div>
-            
-            <div class="gift-card">
-                <div class="gift-tag">#2 PAI</div>
-                <div class="gift-icon-container">
-                    <div class="gift-icon-bg"><i class="fas fa-tshirt"></i></div>
-                    <div class="gift-main-icon"><i class="fas fa-tshirt"></i></div>
-                </div>
-                <div class="gift-content">
-                    <h2 class="gift-title"><i class="fas fa-tshirt"></i> Camiseta Hering</h2>
-                    <p class="gift-description">Básica, simples, discreta. Basicamente eu, mas em forma de tecido.</p>
-                    <div class="gift-details">
-                        <strong>Estilo:</strong> "Pai de família que tenta parecer jovem"<br>
-                        <strong>Tamanho:</strong> XXG (o G é de "generoso")<br>
-                        <strong>Cor:</strong> Qualquer uma, desde que não seja verde.
-                    </div>
-                    <a href="https://www.hering.com.br/camisetas-masculinas" target="_blank" class="gift-link">VER CAMISETAS</a>
-                </div>
-            </div>
-            
-            <div class="gift-card">
-                <div class="gift-tag">#3 TECH</div>
-                <div class="gift-icon-container">
-                    <div class="gift-icon-bg"><i class="fas fa-tablet-screen-button"></i></div>
-                    <div class="gift-main-icon"><i class="fas fa-tablet-screen-button"></i></div>
-                </div>
-                <div class="gift-content">
-                    <h2 class="gift-title"><i class="fas fa-tablet-screen-button"></i> Tablet Xiaomi Pad 2</h2>
-                    <p class="gift-description">Tela imersiva com 4 alto-falantes para eu assistir meus vídeos em paz.</p>
-                    <div class="gift-details">
-                        <strong>Specs:</strong> 256GB + 8GB RAM, bateria de sobra.<br>
-                        <strong>Uso principal:</strong> Jogar e assistir YouTube deitado no sofá na pior postura possível.
-                    </div>
-                    <a href="https://www.amazon.com.br/chamadas-alto-falantes-9000mAh-Bluetooth-25040RP0AL/dp/B0F9B9QDNK?th=1" target="_blank" class="gift-link">VER TABLET</a>
-                </div>
-            </div>
+      </div>
 
-            <div class="gift-card">
-                <div class="gift-tag">#4 JOGO</div>
-                <div class="gift-icon-container">
-                    <div class="gift-icon-bg"><i class="fas fa-futbol"></i></div>
-                    <div class="gift-main-icon"><i class="fas fa-futbol"></i></div>
-                </div>
-                <div class="gift-content">
-                    <h2 class="gift-title"><i class="fas fa-futbol"></i> Patch FIFA FRIENDS</h2>
-                    <p class="gift-description">A versão Premium Plus - V9. Pra deixar minha gameplay voando!</p>
-                    <div class="gift-details">
-                        <strong>Preço:</strong> De R$ 60 por <span style="color: var(--primary); font-weight: bold;">R$ 50</span><br>
-                        <strong>Objetivo:</strong> Ter os elencos atualizados pra parar de passar raiva no modo carreira.
-                    </div>
-                    <a href="https://www.fifafriends.com.br/loja" target="_blank" class="gift-link">VER PATCH</a>
-                </div>
-            </div>
+      <section class="panel active" id="panel-general" role="tabpanel">
+        <div class="cards" id="general-cards"></div>
+      </section>
 
-            <div class="gift-card">
-                <div class="gift-tag">#5 ÚTIL</div>
-                <div class="gift-icon-container">
-                    <div class="gift-icon-bg"><i class="fas fa-mug-hot"></i></div>
-                    <div class="gift-main-icon"><i class="fas fa-mug-hot"></i></div>
-                </div>
-                <div class="gift-content">
-                    <h2 class="gift-title"><i class="fas fa-bottle-water"></i> Copo Térmico Stanley</h2>
-                    <p class="gift-description">Pra bebida não esquentar (ou esfriar) enquanto o jogo vai pros pênaltis.</p>
-                    <div class="gift-details">
-                        <strong>Capacidade:</strong> 887ml (pra não precisar levantar).<br>
-                        <strong>Meta de vida:</strong> Reduzir minhas idas à geladeira em cerca de 80%.
-                    </div>
-                    <a href="https://www.amazon.com.br/Tumbler-T%C3%A9rmico-Straw-Stanley-Quartz/dp/B0CZM6FZ3D?source=ps-sl-shoppingads-lpcontext&ref_=fplfs&smid=A1ZZFT5FULY4LN&th=1" target="_blank" class="gift-link">VER COPO</a>
-                </div>
-            </div>
+      <section class="panel" id="panel-shirts" role="tabpanel">
+        <div class="cards" id="shirts-cards"></div>
+      </section>
+    </main>
 
-            <div class="gift-card">
-                <div class="gift-tag">#6 RETRÔ</div>
-                <div class="gift-icon-container">
-                    <div class="gift-icon-bg"><i class="fas fa-shirt"></i></div>
-                    <div class="gift-main-icon"><i class="fas fa-shirt"></i></div>
-                </div>
-                <div class="gift-content">
-                    <h2 class="gift-title"><i class="fas fa-shirt"></i> Camisa CCCP Retrô</h2>
-                    <p class="gift-description">O manto histórico da grandiosa seleção da antiga União Soviética.</p>
-                    <div class="gift-details">
-                        <strong>Utilidade:</strong> Ditar as táticas no meio-campo do sofá de casa.<br>
-                        <strong>Caimento:</strong> Projetada para acomodar confortavelmente o "shape de pai".
-                    </div>
-                    <a href="https://www.retrogol.com.br/idolos-eternos/camisa-cccp-retro-classic-masculina?srsltid=AfmBOoqp1wW4uVwFtRxca39PwlD5ovS-y5IDpSip-ME0QT5YBn-Z5RWv&variant_id=6035" target="_blank" class="gift-link">VER CAMISA</a>
-                </div>
-            </div>
+    <footer class="footer">
+      <strong>Observacao:</strong> nas camisas, o ideal e abrir primeiro o tutorial e depois seguir para os links dos modelos.
+      Assim fica mais facil acertar versao e tamanho.
+    </footer>
+  </div>
 
-            <div class="gift-card">
-                <div class="gift-tag">#7 AUDIO</div>
-                <div class="gift-icon-container">
-                    <div class="gift-icon-bg"><i class="fas fa-volume-high"></i></div>
-                    <div class="gift-main-icon"><i class="fas fa-volume-high"></i></div>
-                </div>
-                <div class="gift-content">
-                    <h2 class="gift-title"><i class="fas fa-volume-high"></i> Caixa de Som Redragon</h2>
-                    <p class="gift-description">Pra dar aquele up no áudio do PC e deixar a mesa muito mais estilosa.</p>
-                    <div class="gift-details">
-                        <strong>Potência:</strong> Ideal pra vídeos (sem acordar a vizinhança inteira).<br>
-                        <strong>Visual:</strong> Preto com LED vermelho. A ciência prova que LED aumenta o FPS!
-                    </div>
-                    <a href="https://www.kabum.com.br/produto/120538/caixa-de-som-redragon-stentor-gs500-2x3w-3-5mm-preto-e-led-vermelho?srsltid=AfmBOoqq3YmeawLYxh5GvdUZOnfnuKWCQ57lxHANjnSi5iPQVT71kHn7pEw" target="_blank" class="gift-link">VER CAIXA DE SOM</a>
-                </div>
-            </div>
+  <script>
+    const generalItems = [
+      {
+        badge: "Audio",
+        title: "Fone Bluetooth",
+        subtitle: "Para ouvir musica, videos e podcast com mais conforto.",
+        description: "Segue firme como uma boa opcao para usar no dia a dia e também em momentos mais tranquilos em casa.",
+        details: [
+          "Prioridade boa para uso diario.",
+          "Ideal se tiver bom conforto e autonomia."
+        ],
+        cta: "Abrir link",
+        href: "https://www.amazon.com.br/soundcore-Cancelamento-Reprodu%C3%A7%C3%A3o-Personaliza%C3%A7%C3%A3o-Transpar%C3%AAncia/dp/B0C3HCD34R"
+      },
+      {
+        badge: "Roupa",
+        title: "Camiseta Hering",
+        subtitle: "Basica, facil de usar e sem erro.",
+        description: "Continua como opcao curinga para o dia a dia.",
+        details: [
+          "Tamanho: XXG.",
+          "Cor: qualquer uma, menos verde."
+        ],
+        cta: "Ver camisetas",
+        href: "https://www.hering.com.br/camisetas-masculinas"
+      },
+      {
+        badge: "Tech",
+        title: "Tablet Xiaomi Pad 2",
+        subtitle: "Tela grande para video, leitura e uso casual no sofa.",
+        description: "Boa pedida para consumo de conteudo e jogos, principalmente pelo conforto de usar longe do computador.",
+        details: [
+          "Preferencia pelo modelo com bom armazenamento.",
+          "Uso pensado para multimedia e lazer."
+        ],
+        cta: "Ver tablet",
+        href: "https://www.amazon.com.br/chamadas-alto-falantes-9000mAh-Bluetooth-25040RP0AL/dp/B0F9B9QDNK?th=1"
+      },
+      {
+        badge: "Jogo",
+        title: "Patch FIFA FRIENDS",
+        subtitle: "Atualizacao para jogar com elencos e conteudo mais novos.",
+        description: "Entra como item digital e pratico para quem quiser pegar algo mais direto.",
+        details: [
+          "Versao desejada: Premium Plus - V9.",
+          "Faixa que estava sendo considerada: R$ 50."
+        ],
+        cta: "Ver patch",
+        href: "https://www.fifafriends.com.br/loja"
+      },
+      {
+        badge: "Setup",
+        title: "Caixa de Som Redragon",
+        subtitle: "Para melhorar o audio do PC sem ocupar muito espaco.",
+        description: "Segue sendo uma opcao legal para mesa e uso diario.",
+        details: [
+          "Visual preto com LED vermelho.",
+          "Boa para videos, musica e uso casual."
+        ],
+        cta: "Ver caixa de som",
+        href: "https://www.kabum.com.br/produto/120538/caixa-de-som-redragon-stentor-gs500-2x3w-3-5mm-preto-e-led-vermelho?srsltid=AfmBOoqq3YmeawLYxh5GvdUZOnfnuKWCQ57lxHANjnSi5iPQVT71kHn7pEw"
+      },
+      {
+        badge: "Decoracao",
+        title: "Neo Quimica Arena",
+        subtitle: "Miniatura para estante e colecao.",
+        description: "Segue como item bem pessoal, mais para decorar e carregar um pouco do Corinthians para o quarto.",
+        details: [
+          "Tamanho informado anteriormente: 24 cm.",
+          "Boa opcao para quem quiser fugir de eletronicos."
+        ],
+        cta: "Ver miniatura",
+        href: "https://shopee.com.br/product/429854665/54954472820?gads_t_sig=VTJGc2RHVmtYMTlxTFVSVVRrdENkVEdTU3BlMW9zMXB6bGYrZ0J1VEdQdlBOZi8wRmZETlltaG9TTVRxMUJOeUREd1R5Y2pQVTBFZUhuVlF2a2NqRXl6VmNEaWp6Nk50ZUROcE4vVU11WHR3NEFvUzNlR2tEZlk1WnY4WmZZQTJwNEFBZ1diNDMxZCtkQlcrSnNYZ0xRPT0"
+      },
+      {
+        badge: "Setup",
+        title: "Hub USB 3.0",
+        subtitle: "Mais portas para mesa, perifericos e acessorios.",
+        description: "Item simples, util e facil de encaixar em qualquer rotina de computador.",
+        details: [
+          "Modelo de 7 portas.",
+          "Ajuda bastante na organizacao do setup."
+        ],
+        cta: "Ver hub USB",
+        href: "https://www.amazon.com.br/Velocidade-Indicador-Transfer%C3%AAncia-Compat%C3%ADvel-impressora/dp/B0F19G7RR8"
+      },
+      {
+        badge: "Futebol",
+        title: "Minibola Copa 26",
+        subtitle: "Objeto de colecao e tambem para brincar sem ocupar espaco.",
+        description: "Boa opcao para quem quiser algo mais leve, visual e ligado a futebol.",
+        details: [
+          "Modelo ligado a Copa de 2026.",
+          "Tamanho mini."
+        ],
+        cta: "Ver minibola",
+        href: "https://www.adidas.com.br/minibola-copa-do-mundo-da-fifa-26-tm-trionda/JD8034.html"
+      },
+      {
+        badge: "Setup",
+        title: "Mouse Pad Havit 70x30",
+        subtitle: "Base grande para teclado e mouse na mesa.",
+        description: "Segue como opcao pratica para melhorar conforto e organizacao da area de uso.",
+        details: [
+          "Dimensao: 70 x 30 cm.",
+          "Bom para deixar a bancada mais uniforme."
+        ],
+        cta: "Ver mouse pad",
+        href: "https://www.amazon.com.br/Mouse-Grande-Gamer-Havit-Hv-Mp861/dp/B07K11FVBY?source=ps-sl-shoppingads-lpcontext&ref_=fplfs&psc=1&smid=A1ZZFT5FULY4LN"
+      },
+      {
+        badge: "Novo",
+        title: "Smartwatch Xiaomi Redmi Watch 5 Active",
+        subtitle: "Versao original com Alexa, linha 2024.",
+        description: "Entrou como nova opcao para quem quiser algo mais atual e versatil, util tanto no dia a dia quanto para notificacoes e rotina.",
+        details: [
+          "Nome completo: Smartwatch Xiaomi Redmi Watch 5 Active Original c/ Alexa 2024.",
+          "Link enviado da Magazine Luiza."
+        ],
+        cta: "Ver smartwatch",
+        href: "https://www.magazineluiza.com.br/smartwatch-xiaomi-redmi-watch-5-active-original-c-alexa-2024/p/jc4kghbdck/te/smtw/?utm_source=google&utm_medium=cpc&utm_campaign=google_eco_apl_pro_app_none_none_none_none-geral-catalogoapp&utm_term=76792&utm_content=catalogoapp_con_amp_catalogogoogle_cat_tod_none&partner_id=76792&seller_id=euroiphone&srsltid=AfmBOor9WXl6ACCrbhAPoHMpnYVv0naqtJJxXx6OJjCfBZenpy31Lzwu5RY"
+      },
+      {
+        badge: "Novo",
+        title: "Pantufa Chinelo Slipper com Textura",
+        subtitle: "Cinza escuro, tamanho 43/44.",
+        description: "Entrou para a parte mais conforto da lista. Simples, bonito e facil de acertar.",
+        details: [
+          "Cor: cinza escuro.",
+          "Tamanho: 43/44."
+        ],
+        cta: "Ver pantufa",
+        href: "https://www.lojasrenner.com.br/p/pantufa-chinelo-slipper-com-textura/-/A-601248044-br.lr?sku=601248079&p=refresh&srsltid=AfmBOoqyVHRBjc8f-8CSahex3c1piOQuqbn74oQSneiYYi2dkIZ0AnlyYXw"
+      }
+    ];
 
-            <div class="gift-card">
-                <div class="gift-tag">#8 TIMÃO</div>
-                <div class="gift-icon-container">
-                    <div class="gift-icon-bg"><i class="fas fa-monument"></i></div>
-                    <div class="gift-main-icon"><i class="fas fa-monument"></i></div>
-                </div>
-                <div class="gift-content">
-                    <h2 class="gift-title"><i class="fas fa-monument"></i> Neo Química Arena</h2>
-                    <p class="gift-description">A maquete da nossa casa sagrada pra decorar a estante. Vai Corinthians!</p>
-                    <div class="gift-details">
-                        <strong>Tamanho:</strong> 24cm de puro orgulho (e algum sofrimento, faz parte).<br>
-                        <strong>Motivo:</strong> Já que eu não posso morar lá, ela mora no meu quarto.
-                    </div>
-                    <a href="https://shopee.com.br/product/429854665/54954472820?gads_t_sig=VTJGc2RHVmtYMTlxTFVSVVRrdENkVEdTU3BlMW9zMXB6bGYrZ0J1VEdQdlBOZi8wRmZETlltaG9TTVRxMUJOeUREd1R5Y2pQVTBFZUhuVlF2a2NqRXl6VmNEaWp6Nk50ZUROcE4vVU11WHR3NEFvUzNlR2tEZlk1WnY4WmZZQTJwNEFBZ1diNDMxZCtkQlcrSnNYZ0xRPT0" target="_blank" class="gift-link">VER MINIATURA</a>
-                </div>
-            </div>
+    const shirtItems = [
+      {
+        type: "tutorial",
+        badge: "Leia primeiro",
+        title: "Tutorial para comprar as camisas",
+        subtitle: "Abra esse guia antes de escolher qualquer modelo.",
+        description: "Separei o tutorial como primeiro card da aba para deixar o processo mais claro e diminuir a chance de erro em tamanho, versao ou pedido.",
+        details: [
+          "Vale ler antes de abrir os links do Yupoo.",
+          "Serve como referencia para o passo a passo da compra."
+        ],
+        cta: "Abrir tutorial",
+        href: "https://docs.google.com/document/d/1KmmRyIc3y4bLnkzZY-Z2H7tmEnRp8b1BbzWBQFtcId8/mobilebasic?utm_source=ig&utm_medium=social&utm_content=link_in_bio"
+      },
+      {
+        badge: "Camisa 1",
+        title: "Corinthians Away 2024/25",
+        subtitle: "Modelo: S-XXXXL12",
+        description: "Primeira camisa de time da nova aba, ja com o tamanho desejado destacado para facilitar.",
+        details: [
+          "Tamanho pedido: 2XG.",
+          "Link Yupoo enviado para esse modelo especifico."
+        ],
+        cta: "Ver camisa do Corinthians",
+        href: "https://rainhajin.x.yupoo.com/albums/216986937?uid=1&isSubCate=false&referrercate=5070373"
+      },
+      {
+        badge: "Camisa 2",
+        title: "Portugal Special Edition Black Jersey 2026",
+        subtitle: "Modelo: Sizes S-XXXXL11",
+        description: "Segunda camisa de time da aba, em versao preta e tambem com o tamanho anotado no card.",
+        details: [
+          "Tamanho pedido: 2XL.",
+          "Link Yupoo enviado para esse modelo especifico."
+        ],
+        cta: "Ver camisa de Portugal",
+        href: "https://rainhajin.x.yupoo.com/albums/230471932?uid=1&isSubCate=false&referrercate=5172288"
+      }
+    ];
 
-            <div class="gift-card">
-                <div class="gift-tag">#9 SETUP</div>
-                <div class="gift-icon-container">
-                    <div class="gift-icon-bg"><i class="fab fa-usb"></i></div>
-                    <div class="gift-main-icon"><i class="fab fa-usb"></i></div>
-                </div>
-                <div class="gift-content">
-                    <h2 class="gift-title"><i class="fab fa-usb"></i> Hub USB 3.0 (7 Portas)</h2>
-                    <p class="gift-description">Pra acabar com o drama de ter que desconectar o mouse pra espetar o pen drive.</p>
-                    <div class="gift-details">
-                        <strong>Capacidade:</strong> 7 portas simultâneas de alta velocidade.<br>
-                        <strong>Utilidade:</strong> Ligar todas as quinquilharias eletrônicas sem faltar conexão.
-                    </div>
-                    <a href="https://www.amazon.com.br/Velocidade-Indicador-Transfer%C3%AAncia-Compat%C3%ADvel-impressora/dp/B0F19G7RR8" target="_blank" class="gift-link">VER HUB USB</a>
-                </div>
-            </div>
+    const intros = {
+      general: "Produtos do dia a dia, setup, futebol e conforto em um unico lugar.",
+      shirts: "Tutorial primeiro, depois as camisas. Assim a aba fica organizada e direta."
+    };
 
-            <div class="gift-card">
-                <div class="gift-tag">#10 COPA</div>
-                <div class="gift-icon-container">
-                    <div class="gift-icon-bg"><i class="fas fa-globe"></i></div>
-                    <div class="gift-main-icon"><i class="fas fa-globe"></i></div>
-                </div>
-                <div class="gift-content">
-                    <h2 class="gift-title"><i class="fas fa-globe"></i> Minibola Copa 26</h2>
-                    <p class="gift-description">A Trionda da FIFA pra já ir entrando no clima de nervosismo pro mundial.</p>
-                    <div class="gift-details">
-                        <strong>Tamanho:</strong> Mini (assim não quebro nada se chutar na parede sem querer).<br>
-                        <strong>Uso:</strong> Objeto antiestresse durante os jogos da seleção.
-                    </div>
-                    <a href="https://www.adidas.com.br/minibola-copa-do-mundo-da-fifa-26-tm-trionda/JD8034.html" target="_blank" class="gift-link">VER MINIBOLA</a>
-                </div>
-            </div>
+    const generalCards = document.getElementById("general-cards");
+    const shirtsCards = document.getElementById("shirts-cards");
+    const generalCount = document.getElementById("general-count");
+    const shirtsCount = document.getElementById("shirts-count");
+    const sectionIntro = document.getElementById("section-intro");
+    const tabs = document.querySelectorAll(".tab");
+    const panels = {
+      general: document.getElementById("panel-general"),
+      shirts: document.getElementById("panel-shirts")
+    };
 
-            <div class="gift-card">
-                <div class="gift-tag">#11 GAMER</div>
-                <div class="gift-icon-container">
-                    <div class="gift-icon-bg"><i class="fas fa-keyboard"></i></div>
-                    <div class="gift-main-icon"><i class="fas fa-keyboard"></i></div>
-                </div>
-                <div class="gift-content">
-                    <h2 class="gift-title"><i class="fas fa-keyboard"></i> Teclado Redragon Shiva</h2>
-                    <p class="gift-description">Pra digitar com conforto e apoiar o pulso que já pede socorro.</p>
-                    <div class="gift-details">
-                        <strong>Detalhe:</strong> Membrana = menos barulho de clique nas madrugadas.<br>
-                        <strong>Visual:</strong> RGB que aumenta a minha habilidade em 200% (confia).
-                    </div>
-                    <a href="https://www.redragon.store/teclado-gamer-redragon-shiva-rgb-membrana-1800-compact-apoio-de-pulso-abnt2-k515-rgb-pt" target="_blank" class="gift-link">VER TECLADO</a>
-                </div>
-            </div>
+    function createCard(item) {
+      const article = document.createElement("article");
+      article.className = item.type === "tutorial" ? "card tutorial" : "card";
 
-            <div class="gift-card">
-                <div class="gift-tag">#12 DESLIZE</div>
-                <div class="gift-icon-container">
-                    <div class="gift-icon-bg"><i class="fas fa-computer-mouse"></i></div>
-                    <div class="gift-main-icon"><i class="fas fa-computer-mouse"></i></div>
-                </div>
-                <div class="gift-content">
-                    <h2 class="gift-title"><i class="fas fa-computer-mouse"></i> Mouse Pad Havit 70x30</h2>
-                    <p class="gift-description">Chega de deixar o mouse cair da mesa bem na hora crucial do jogo.</p>
-                    <div class="gift-details">
-                        <strong>Dimensão:</strong> 70x30 cm (cabe o teclado, o mouse e a dignidade).<br>
-                        <strong>Utilidade:</strong> O espaço perfeito para eu errar os cliques com mais conforto.
-                    </div>
-                    <a href="https://www.amazon.com.br/Mouse-Grande-Gamer-Havit-Hv-Mp861/dp/B07K11FVBY?source=ps-sl-shoppingads-lpcontext&ref_=fplfs&psc=1&smid=A1ZZFT5FULY4LN" target="_blank" class="gift-link">VER MOUSE PAD</a>
-                </div>
-            </div>
+      const detailsHtml = item.details
+        .map((detail) => `<li>${detail}</li>`)
+        .join("");
+
+      const warmClass = item.type === "tutorial" ? " warm" : "";
+      const linkClass = item.type === "tutorial" ? "" : " light";
+
+      article.innerHTML = `
+        <div class="card-top">
+          <span class="pill${warmClass}">${item.badge}</span>
+          <span class="meta">${item.type === "tutorial" ? "Guia" : "Link direto"}</span>
         </div>
-        
-        <div class="disclaimer">
-            <p>🎁 O importante é a amizade (mas o presente ajuda bastante! 😉)</p>
-            <p style="margin-top: 10px; font-size: 0.85rem; font-weight: 400; color: var(--text-light);">*Última atualização: Aguardando ansiosamente o meu bolo*</p>
+        <div>
+          <h2>${item.title}</h2>
+          <p class="subtitle">${item.subtitle}</p>
+          <p class="description">${item.description}</p>
+          <ul class="details">${detailsHtml}</ul>
         </div>
-    </div>
+        <a class="link${linkClass}" href="${item.href}" target="_blank" rel="noreferrer">${item.cta}</a>
+      `;
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const introScreen = document.getElementById('intro-screen');
-            const giftList = document.getElementById('gift-list');
-            const revealBtn = document.getElementById('reveal-btn');
-            const cards = document.querySelectorAll('.gift-card');
-            
-            // Lógica do Botão
-            revealBtn.addEventListener('click', function() {
-                this.innerHTML = "PREPARANDO SURPRESA...";
-                this.style.transform = 'scale(0.95)';
-                
-                setTimeout(() => {
-                    introScreen.classList.add('hidden');
-                    
-                    setTimeout(() => {
-                        giftList.classList.add('visible');
-                        window.scrollTo({ top: 0, behavior: 'smooth' });
-                        
-                        // Animação de entrada dos cartões em cascata (stagger)
-                        cards.forEach((card, index) => {
-                            setTimeout(() => {
-                                card.classList.add('show');
-                            }, 100 * index);
-                        });
-                        
-                    }, 400);
-                }, 600);
-            });
-            
-            // Prevenir zoom de toque duplo no celular
-            let lastTouchEnd = 0;
-            document.addEventListener('touchend', function(event) {
-                const now = Date.now();
-                if (now - lastTouchEnd <= 300) {
-                    event.preventDefault();
-                }
-                lastTouchEnd = now;
-            }, false);
-        });
-    </script>
+      return article;
+    }
+
+    function renderCards(target, items) {
+      target.innerHTML = "";
+      items.forEach((item) => {
+        target.appendChild(createCard(item));
+      });
+    }
+
+    function setActiveTab(tabName) {
+      tabs.forEach((tab) => {
+        const isActive = tab.dataset.tab === tabName;
+        tab.classList.toggle("active", isActive);
+        tab.setAttribute("aria-selected", String(isActive));
+      });
+
+      Object.entries(panels).forEach(([name, panel]) => {
+        panel.classList.toggle("active", name === tabName);
+      });
+
+      sectionIntro.textContent = intros[tabName];
+    }
+
+    renderCards(generalCards, generalItems);
+    renderCards(shirtsCards, shirtItems);
+    generalCount.textContent = String(generalItems.length);
+    shirtsCount.textContent = String(shirtItems.length - 1);
+
+    tabs.forEach((tab) => {
+      tab.addEventListener("click", () => {
+        setActiveTab(tab.dataset.tab);
+      });
+    });
+  </script>
 </body>
 </html>
